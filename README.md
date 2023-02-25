@@ -1,13 +1,13 @@
-MY_NEW_GEM
+rubocop-twirp
 ======
-![Gem](https://img.shields.io/gem/dt/MY_NEW_GEM?style=plastic)
-[![codecov](https://codecov.io/gh/dpep/MY_NEW_REPO/branch/main/graph/badge.svg)](https://codecov.io/gh/dpep/MY_NEW_REPO)
+![Gem](https://img.shields.io/gem/dt/rubocop-twirp?style=plastic)
+[![codecov](https://codecov.io/gh/dpep/rubocop-twirp/branch/main/graph/badge.svg)](https://codecov.io/gh/dpep/rubocop-twirp)
 
 ...
 
 
 ```ruby
-require "MY_NEW_GEM"
+require "rubocop-twirp"
 ```
 
 

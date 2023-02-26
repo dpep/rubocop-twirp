@@ -3,28 +3,30 @@ rubocop-twirp
 ![Gem](https://img.shields.io/gem/dt/rubocop-twirp?style=plastic)
 [![codecov](https://codecov.io/gh/dpep/rubocop-twirp/branch/main/graph/badge.svg)](https://codecov.io/gh/dpep/rubocop-twirp)
 
-...
-
-[RuboCop](https://github.com/bbatsov/rubocop)
+Improve your Twirp code with [RuboCop](https://github.com/bbatsov/rubocop)
 
 
-
-```ruby
+## Install
+```
 gem install rubocop-twirp
+```
 
-# or add to your Gemfile
+Add to your Gemfile
+```ruby
 gem "rubocop-twirp", require: false
 ```
 
-Add this to your .rubocop.yml:
+Add to .rubocop.yml
 ```
 require: rubocop-twirp
 ```
 
-Scan for issues
+## Use
+Scan and fix issues
 ```
-rubocop -r rubocop-twirp --only Twirp
+rubocop -r rubocop-twirp --only Twirp -A
 ```
+
 
 ----
 ## Contributing

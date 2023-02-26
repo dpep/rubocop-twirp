@@ -5,3 +5,8 @@ Twirp/DeprecatedArguments:
   Description: 'Use keyword args for `Twirp::ClientResp.new`'
   Enabled: false
   VersionAdded: '0.1'
+
+Twirp/RSpecBeA:
+  Description: 'Use rspec-twirp to simplify specs'
+  Enabled: true
+  VersionAdded: '0.1'

@@ -45,3 +45,9 @@ Yes please  :)
 1. Commit your changes (`git commit -am 'awesome new feature'`)
 1. Push your branch (`git push origin my-feature`)
 1. Create a Pull Request
+
+
+### Resources
+- https://docs.rubocop.org/rubocop/1.46/development.html
+- https://github.com/rubocop/rubocop-ast/blob/master/docs/modules/ROOT/pages/node_pattern.adoc
+- https://github.com/rubocop/rubocop-performance

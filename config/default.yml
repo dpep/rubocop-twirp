@@ -3,5 +3,5 @@ Twirp:
 
 Twirp/DeprecatedArguments:
   Description: 'Use keyword args for `Twirp::ClientResp.new`'
-  Enabled: true
+  Enabled: false
   VersionAdded: '0.1'

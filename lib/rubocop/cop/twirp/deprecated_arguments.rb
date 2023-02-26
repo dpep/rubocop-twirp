@@ -27,9 +27,6 @@ module RuboCop
               "`%<class_name>s.%<method_name>s(%<kwargs>s)`"
 
         def on_send(node)
-          # kwargs were introduced in Twirp v1.10
-          return unless Gem::Version.new(::Twirp::VERSION) >= Gem::Version.new("1.10")
-
           return unless pos_args?(node)
 
           kwargs = POSITIONAL_ARGS.map.with_index do |arg, index|

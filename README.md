@@ -28,6 +28,12 @@ rubocop -r rubocop-twirp --only Twirp -A
 ```
 
 
+Fix backwards compatibility issue introduced in [Twirp v1.10](https://github.com/github/twirp-ruby/commit/4614a5fe004ca408c48ddfc813c80f3ad7bcb586). (Cop disabled by default)
+```
+rubocop -r rubocop-twirp --only Twirp/DeprecatedArguments -A
+```
+
+
 ----
 ## Contributing
 

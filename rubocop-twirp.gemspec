@@ -13,7 +13,6 @@ Gem::Specification.new do |s|
   s.version     = package.const_get "VERSION"
 
   s.add_dependency "rubocop", ">= 1"
-  s.add_dependency "twirp", ">= 1"
 
   s.add_development_dependency "byebug"
   s.add_development_dependency "rspec"

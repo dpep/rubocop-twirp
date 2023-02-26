@@ -1,0 +1,7 @@
+Twirp:
+  Enabled: true
+
+Twirp/DeprecatedArguments:
+  Description: 'Use keyword args for `Twirp::ClientResp.new`'
+  Enabled: true
+  VersionAdded: '0.1'

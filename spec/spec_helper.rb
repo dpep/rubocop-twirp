@@ -1,5 +1,7 @@
 require "byebug"
 require "rspec"
+require "rubocop"
+require "rubocop/rspec/support"
 require "simplecov"
 
 SimpleCov.start do
@@ -23,6 +25,8 @@ RSpec.configure do |config|
     # verify existence of stubbed methods
     mocks.verify_partial_doubles = true
   end
+
+  config.include RuboCop::RSpec::ExpectOffense
 end
 
 Dir["./spec/support/**/*.rb"].sort.each { |f| require f }

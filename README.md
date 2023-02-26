@@ -5,11 +5,26 @@ rubocop-twirp
 
 ...
 
+[RuboCop](https://github.com/bbatsov/rubocop)
+
+
 
 ```ruby
-require "rubocop-twirp"
+gem install rubocop-twirp
+
+# or add to your Gemfile
+gem "rubocop-twirp", require: false
 ```
 
+Add this to your .rubocop.yml:
+```
+require: rubocop-twirp
+```
+
+Scan for issues
+```
+rubocop -r rubocop-twirp --only Twirp
+```
 
 ----
 ## Contributing

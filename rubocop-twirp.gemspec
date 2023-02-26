@@ -1,5 +1,5 @@
-require_relative "lib/rubocop-twirp/version"
-package = rubocop-twirp
+require_relative "lib/rubocop/twirp/version"
+package = RuboCop::Twirp
 
 
 Gem::Specification.new do |s|
@@ -11,6 +11,9 @@ Gem::Specification.new do |s|
   s.name        = File.basename(__FILE__).split(".")[0]
   s.summary     = package.to_s
   s.version     = package.const_get "VERSION"
+
+  s.add_dependency "rubocop", ">= 1"
+  s.add_dependency "twirp", ">= 1"
 
   s.add_development_dependency "byebug"
   s.add_development_dependency "rspec"

@@ -31,25 +31,24 @@ module RuboCop
 
         def on_send(node)
           if twirp_reponse?(node)
-            range = range_between(
-              node.loc.selector.begin_pos,
-              node.loc.end.end_pos,
-            )
-
-            add_offense(range, message: TWIRP_RESPONSE_MSG) do |corrector|
-              corrector.replace(range, "be_a_twirp_response")
-            end
+            respond_to_offense(node, TWIRP_RESPONSE_MSG, "be_a_twirp_response")
           end
 
           if twirp_error?(node)
-            range = range_between(
-              node.loc.selector.begin_pos,
-              node.loc.end.end_pos,
-            )
+            respond_to_offense(node, TWIRP_ERROR_MSG, "be_a_twirp_error")
+          end
+        end
 
-            add_offense(range, message: TWIRP_ERROR_MSG) do |corrector|
-              corrector.replace(range, "be_a_twirp_error")
-            end
+        private
+
+        def respond_to_offense(node, msg, replacement)
+          range = range_between(
+            node.loc.selector.begin_pos,
+            node.loc.end.end_pos,
+          )
+
+          add_offense(range, message: msg) do |corrector|
+            corrector.replace(range, replacement)
           end
         end
       end

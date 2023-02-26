@@ -16,7 +16,7 @@ module RuboCop
         POSITIONAL_ARGS = [:data, :error].freeze
 
         def_node_matcher :pos_args?, <<~PATTERN
-          (send (const (const { nil? cbase } :Twirp) :ClientResp) :new $!hash_type?+)
+          (send (const (const _ :Twirp) :ClientResp) :new $!hash_type?+)
         PATTERN
 
 

@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    rubocop-twirp (0.0.0)
+    rubocop-twirp (0.0.1)
       rubocop (>= 1)
       twirp (>= 1)
 

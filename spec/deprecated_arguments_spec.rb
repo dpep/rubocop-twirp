@@ -31,16 +31,6 @@ describe RuboCop::Cop::Twirp::DeprecatedArguments, :config do
     RUBY
   end
 
-  context "when using Twirp v1.9" do
-    before { stub_const("Twirp::VERSION", "1.9.0") }
-
-    it "does not register an offense" do
-      expect_no_offenses(<<~RUBY)
-        Twirp::ClientResp.new(data, error)
-      RUBY
-    end
-  end
-
   it "does not register an offense when using keyword arguments" do
     expect_no_offenses(<<~RUBY)
       Twirp::ClientResp.new(data: data, error: error)

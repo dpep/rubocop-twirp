@@ -36,5 +36,17 @@ describe RuboCop::Cop::Twirp::RSpecBeA, :config do
       expect(res).to be_a_twirp_error
     RUBY
   end
+
+  context "when there's a parse error" do
+    before do
+      allow_any_instance_of(described_class).to receive(:twirp_type?).and_yield(:foo)
+    end
+
+    it "ignores the offense" do
+      expect_no_offenses(<<~RUBY)
+        expect(res).to be_a(Twirp::ClientResp)
+      RUBY
+    end
+  end
 end
 

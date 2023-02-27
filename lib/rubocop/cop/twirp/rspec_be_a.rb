@@ -15,8 +15,8 @@ module RuboCop
       #
       class RSpecBeA < Base
         RESTRICT_ON_SEND = [:be_a].freeze
-        TWIRP_RESPONSE_MSG = "Use `be_a_twirp_response` from rspec-twirp (https://github.com/dpep/rspec-twirp)".freeze
-        TWIRP_ERROR_MSG = "Use `be_a_twirp_error` from rspec-twirp (https://github.com/dpep/rspec-twirp)".freeze
+        TWIRP_RESPONSE_MSG = "Use `be_a_twirp_response` from `rspec-twirp` (https://github.com/dpep/rspec-twirp)".freeze
+        TWIRP_ERROR_MSG = "Use `be_a_twirp_error` from `rspec-twirp` (https://github.com/dpep/rspec-twirp)".freeze
 
         def_node_matcher :twirp_type?, <<~PATTERN
           (send _ :be_a (const (const _ :Twirp) ${:ClientResp :Error}))

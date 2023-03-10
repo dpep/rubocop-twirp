@@ -57,7 +57,6 @@ Checks that Twirp::ClientResp uses keyword arguments instead of positional argum
 Twirp::ClientResp.new(data, error)
 
 # good
-
 Twirp::ClientResp.new(data: data, error: error)
 ```
 

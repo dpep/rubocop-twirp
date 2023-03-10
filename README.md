@@ -17,11 +17,11 @@ gem "rubocop-twirp", require: false
 ```
 
 Add to .rubocop.yml
-```
+```yaml
 require: rubocop-twirp
 ```
 
-## Use
+## Usage
 Scan and fix issues
 ```
 rubocop -r rubocop-twirp --only Twirp -A
@@ -31,6 +31,48 @@ rubocop -r rubocop-twirp --only Twirp -A
 Fix `Twirp::ClientResp` breaking change introduced in [Twirp v1.10](https://github.com/github/twirp-ruby/commit/4614a5fe004ca408c48ddfc813c80f3ad7bcb586). (Cop disabled by default)
 ```
 rubocop -r rubocop-twirp --only Twirp/DeprecatedArguments -A
+```
+
+
+## Cops
+
+#### Twirp/ClientResponse
+
+Use [webmock-twirp](https://github.com/dpep/webmock-twirp) to stub Twirp client responses.
+
+```ruby
+# bad
+allow(MyTwirpClient).to receive(:my_rpc).and_return(Twirp::ClientResp.new(...))
+
+# good
+stub_twirp_request(MyTwirpClient, :my_rpc).to_return(...)
+```
+
+
+#### Twirp/DeprecatedArguments
+Checks that Twirp::ClientResp uses keyword arguments instead of positional arguments.  Needed for Twirp `>= 1.10`
+
+```ruby
+# bad
+Twirp::ClientResp.new(data, error)
+
+# good
+
+Twirp::ClientResp.new(data: data, error: error)
+```
+
+
+#### Twirp/RSpecBeA
+Use [rspec-twirp](https://github.com/dpep/rspec-twirp) to simplify specs.
+
+```ruby
+# bad
+expect(...).to be_a(Twirp::ClientResp)
+expect(...).to be_a(Twirp::Error)
+
+# good
+expect(...).to be_a_twirp_response
+expect(...).to be_a_twirp_error
 ```
 
 

@@ -1,10 +1,13 @@
 Twirp:
   Enabled: true
+  DocumentationBaseURL: https://github.com/dpep/rubocop-twirp/blob/main/README.md#cops
 
 Twirp/ClientResponse:
   Description: 'Use webmock-twirp to stub client responses'
   Enabled: true
   VersionAdded: '0.1'
+  Include:
+    - spec/**/*.rb
 
 Twirp/DeprecatedArguments:
   Description: 'Use keyword args for `Twirp::ClientResp.new`'
@@ -16,3 +19,5 @@ Twirp/RSpecBeA:
   Description: 'Use rspec-twirp to simplify specs'
   Enabled: true
   VersionAdded: '0.1'
+  Include:
+    - spec/**/*.rb

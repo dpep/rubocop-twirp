@@ -1,4 +1,5 @@
-require_relative "lib/rubocop/twirp/version"
+$LOAD_PATH.unshift File.expand_path("lib", __dir__)
+require "rubocop/twirp/version"
 package = RuboCop::Twirp
 
 

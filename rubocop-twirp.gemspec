@@ -1,4 +1,5 @@
-require_relative "lib/rubocop/twirp/version"
+$LOAD_PATH.unshift File.expand_path("lib", __dir__)
+require "rubocop/twirp/version"
 package = RuboCop::Twirp
 
 
@@ -11,6 +12,8 @@ Gem::Specification.new do |s|
   s.name        = File.basename(__FILE__).split(".")[0]
   s.summary     = package.to_s
   s.version     = package.const_get "VERSION"
+
+  s.required_ruby_version = ">= 3"
 
   s.add_dependency "rubocop", ">= 1"
 

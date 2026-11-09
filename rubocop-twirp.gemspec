@@ -15,7 +15,7 @@ Gem::Specification.new do |s|
   s.summary     = "RuboCop::Twirp"
   s.version     = RuboCop::Twirp::VERSION
 
-  s.required_ruby_version = ">= 3"
+  s.required_ruby_version = ">= 3.3"
 
   s.add_dependency "rubocop", ">= 1"
 

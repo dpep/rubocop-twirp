@@ -1,3 +1,6 @@
+## Unreleased
+- Requires Ruby 3.3 or newer.
+
 ###  v0.1.0  (2023-02-26)
 - client response cop
 - be_a cop

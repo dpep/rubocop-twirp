@@ -1,11 +1,11 @@
-require "byebug"
+require "debug"
 require "rspec"
 require "rubocop"
 require "rubocop/rspec/support"
 require "simplecov"
 
 SimpleCov.start do
-  add_filter "spec/"
+  skip "spec/"
 end
 
 if ENV["CI"] == "true" || ENV["CODECOV_TOKEN"]

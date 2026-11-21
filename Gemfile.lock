@@ -32,7 +32,6 @@ GEM
     prettyprint (0.2.1)
     prism (1.9.0)
     racc (1.8.1)
-    rack (3.2.8)
     rainbow (3.1.1)
     rbs (4.2.0)
       logger
@@ -85,7 +84,6 @@ PLATFORMS
 
 DEPENDENCIES
   debug
-  rack
   rspec
   rubocop-twirp!
   simplecov (>= 1)
